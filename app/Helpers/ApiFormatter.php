@@ -15,7 +15,7 @@ class ApiFormatter {
         self::$response['message'] = $message;
         self::$response['data'] = $data;
 
-        return response()->json(self::$response, 200)->withHeaders([
+        return response()->json(self::$response)->withHeaders([
             'Content-Type' => 'Application/json'
         ]);
     }
